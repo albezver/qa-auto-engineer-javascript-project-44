@@ -1,28 +1,26 @@
 import readlineSync from 'readline-sync';
 import greetUser from './cli.js';
-import { defineEvenOdd } from '../src/games/evenOdd.js';
-import { calculateNumbers } from './games/calc.js';
 
 const runGame = (gameRunner) => {
-    const userName = greetUser();
+  const userName = greetUser();
 
-    for (let i = 0; i < 3; i += 1) {
-        const { question, answer: correctAnswer } = gameRunner(); // Деструктурируем объект
+  for (let i = 0; i < 3; i += 1) {
+    const { answer: correctAnswer } = gameRunner();
 
-        const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
+    const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
 
-        if (userAnswer === correctAnswer) {
-            console.log('Correct!');
-        } else {
-            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-            console.log(`Let's try again, ${userName}!`);
-            break;
-        }
-
-        if (i === 2) {
-            console.log(`Congratulations, ${userName}!`);
-        }
+    if (userAnswer === correctAnswer) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      break;
     }
-};    
+
+    if (i === 2) {
+      console.log(`Congratulations, ${userName}!`);
+    }
+  }
+};
 
 export default runGame;
