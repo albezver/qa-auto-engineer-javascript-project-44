@@ -1,20 +1,18 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-
 const defineEvenOdd = () => {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
-    let generatedQuestion = Math.floor(Math.random() * 100); 
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  const generatedQuestion = Math.floor(Math.random() * 100);
 
-    let correctAnswer;
-    if (generatedQuestion % 2 === 0) {
-        correctAnswer = 'yes';
-    } else {
-        correctAnswer = 'no';
-    };
-    
-    console.log(`Question: ${generatedQuestion}`);
+  let correctAnswer;
+  if (generatedQuestion % 2 === 0) {
+    correctAnswer = 'yes';
+  } else {
+    correctAnswer = 'no';
+  }
 
-    return { question: generatedQuestion, answer: correctAnswer };
+  console.log(`Question: ${generatedQuestion}`);
+
+  return { question: generatedQuestion, answer: correctAnswer };
 };
 
-export { defineEvenOdd };
+export default defineEvenOdd;
