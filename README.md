@@ -9,3 +9,6 @@ brain-even game demo video:
 
 brain-calc game demo video:
 [![asciicast](https://asciinema.org/a/ryQ7KpqWzr1zFgFR7qdOuSPgF.svg)](https://asciinema.org/a/ryQ7KpqWzr1zFgFR7qdOuSPgF)
+
+brain-gcd game demo video:
+[![asciicast](https://asciinema.org/a/fU4O6ncEFW9G54rsoXNFlabdB.svg)](https://asciinema.org/a/fU4O6ncEFW9G54rsoXNFlabdB)
