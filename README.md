@@ -12,3 +12,6 @@ brain-calc game demo video:
 
 brain-gcd game demo video:
 [![asciicast](https://asciinema.org/a/fU4O6ncEFW9G54rsoXNFlabdB.svg)](https://asciinema.org/a/fU4O6ncEFW9G54rsoXNFlabdB)
+
+brain-progression demo video:
+[![asciicast](https://asciinema.org/a/RyTa82uJAAfnHbJpClZvnCO3n.svg)](https://asciinema.org/a/RyTa82uJAAfnHbJpClZvnCO3n)
