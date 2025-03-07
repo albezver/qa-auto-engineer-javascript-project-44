@@ -26,6 +26,8 @@ make install
 
 ## How to run the games
 
+Open a console window and run the following commands:
+
 ### Run Brain-even game
 
 ```bash
