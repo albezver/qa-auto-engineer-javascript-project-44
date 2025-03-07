@@ -1,5 +1,19 @@
 # Brain games
 
+**Brain Games** is a set of five console-based games inspired by popular mobile apps designed to train your brain.  
+Each game asks a series of questions that must be answered correctly.  
+
+If you provide three correct answers in a row, you win the game.  
+A wrong answer ends the game and prompts you to try again.  
+
+## Available Games
+
+- **Calculator** – Solve arithmetic expressions.  
+- **Progression** – Find the missing number in a sequence.  
+- **Even Check** – Determine if a given number is even.  
+- **Greatest Common Divisor (GCD)** – Find the greatest common divisor of two numbers.  
+- **Prime Check** – Determine if a given number is prime.  
+
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/albezver/qa-auto-engineer-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/albezver/qa-auto-engineer-javascript-project-44/actions)
@@ -10,7 +24,7 @@
 make install
 ```
 
-## Run games
+## How to run the games
 
 ### Run Brain-even game
 
