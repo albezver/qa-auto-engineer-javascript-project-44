@@ -10,10 +10,9 @@
 make install
 ```
 
-```
 ## Run games
 
-### Brain-even game
+### Run Brain-even game
 
 ```bash
 brain-even
@@ -22,7 +21,7 @@ brain-even
 brain-even game demo video:
 [![asciicast](https://asciinema.org/a/E9uBHKY9gcgvImq99DLlGRPcy.svg)](https://asciinema.org/a/E9uBHKY9gcgvImq99DLlGRPcy)
 
-### Brain-calc game
+### Run Brain-calc game
 
 ```bash
 brain-calc
@@ -31,7 +30,7 @@ brain-calc
 brain-calc game demo video:
 [![asciicast](https://asciinema.org/a/ryQ7KpqWzr1zFgFR7qdOuSPgF.svg)](https://asciinema.org/a/ryQ7KpqWzr1zFgFR7qdOuSPgF)
 
-### Brain-gcd game
+### Run Brain-gcd game
 
 ```bash
 brain-gcd
@@ -40,7 +39,7 @@ brain-gcd
 brain-gcd game demo video:
 [![asciicast](https://asciinema.org/a/fU4O6ncEFW9G54rsoXNFlabdB.svg)](https://asciinema.org/a/fU4O6ncEFW9G54rsoXNFlabdB)
 
-### Brain-progression game
+### Run Brain-progression game
 
 ```bash
 brain-progression
@@ -49,7 +48,7 @@ brain-progression
 brain-progression demo video:
 [![asciicast](https://asciinema.org/a/RyTa82uJAAfnHbJpClZvnCO3n.svg)](https://asciinema.org/a/RyTa82uJAAfnHbJpClZvnCO3n)
 
-### Brain-prime game
+### Run Brain-prime game
 
 ```bash
 brain-prime
