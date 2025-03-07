@@ -4,7 +4,6 @@ const completeProgression = () => {
   const minSeqLength = 5;
   const maxSeqLength = 10;
   const seqLength = Math.floor(Math.random() * (maxSeqLength - minSeqLength + 1)) + minSeqLength;
-      + minSeqLength;
 
   // Generate a sequence step
   const generateSecStep = () => {
