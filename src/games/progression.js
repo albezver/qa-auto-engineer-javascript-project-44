@@ -3,7 +3,7 @@ const completeProgression = () => {
   console.log('What number is missing in the progression?');
   const minSeqLength = 5;
   const maxSeqLength = 10;
-  const seqLength = Math.round(Math.random() * (maxSeqLength - minSeqLength + 1))
+  const seqLength = Math.floor(Math.random() * (maxSeqLength - minSeqLength + 1)) + minSeqLength;
       + minSeqLength;
 
   // Generate a sequence step
@@ -26,7 +26,7 @@ const completeProgression = () => {
   // Generate the question to user
   const missedNum = Math.floor(Math.random() * seqLength); // Define a missing number
   const correctAnswer = seqArr[missedNum]; // Memorize the missing number
-  seqArr[missedNum] = '...';
+  seqArr[missedNum] = '..';
   const questionExpression = seqArr.join(' ');
   console.log(`Question: ${questionExpression}`);
 
