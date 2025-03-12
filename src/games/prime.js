@@ -1,23 +1,26 @@
 #!/usr/bin/env node
 const isPrime = () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  const generatedQuestion = Math.floor(Math.random() * 100);
-  console.log(`Question: ${generatedQuestion}`);
-  // Define correct answer
-  let correctAnswer = 'yes';
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  // Validate if the answer if correct
-  if (generatedQuestion < 2) {
-    correctAnswer = 'no';
-  } else {
-    for (let i = 2; i <= Math.sqrt(generatedQuestion); i += 1) {
-      if (generatedQuestion % i === 0) {
-        correctAnswer = 'no';
+  const getQuestionAndAnswer = () => {
+    const question = Math.floor(Math.random() * 100);
+    let answer = 'yes';
+
+    if (question < 2) {
+      answer = 'no';
+    } else {
+      for (let i = 2; i <= Math.sqrt(question); i += 1) {
+        if (question % i === 0) {
+          answer = 'no';
+          break;
+        }
       }
     }
-  }
 
-  return { question: generatedQuestion, answer: correctAnswer };
+    return { question, answer };
+  };
+
+  return { description, getQuestionAndAnswer };
 };
 
 export default isPrime;
