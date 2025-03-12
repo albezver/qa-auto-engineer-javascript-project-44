@@ -1,18 +1,28 @@
 #!/usr/bin/env node
-const defineEvenOdd = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const generatedQuestion = Math.floor(Math.random() * 100);
+const isEven = (num) => num % 2 === 0;
 
-  let correctAnswer;
-  if (generatedQuestion % 2 === 0) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
+const isPrime = (num) => {
+  if (num < 2) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
   }
+  return true;
+};
 
-  console.log(`Question: ${generatedQuestion}`);
+const defineEvenOdd = () => {
+  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  return { question: generatedQuestion, answer: correctAnswer };
+  const getQuestionAndAnswer = () => {
+    const generatedQuestion = Math.floor(Math.random() * 100);
+    const evenAnswer = isEven(generatedQuestion) ? 'yes' : 'no';
+
+    return {
+      question: generatedQuestion,
+      answer: evenAnswer,
+    };
+  };
+
+  return { description, getQuestionAndAnswer };
 };
 
 export default defineEvenOdd;
