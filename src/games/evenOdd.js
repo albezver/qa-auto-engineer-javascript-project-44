@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const isEven = (num) => num % 2 === 0;
 
 const isPrime = (num) => {
@@ -13,11 +14,12 @@ const defineEvenOdd = () => {
 
   const getQuestionAndAnswer = () => {
     const generatedQuestion = Math.floor(Math.random() * 100);
-    const answer = isEven(generatedQuestion) && isPrime(generatedQuestion) ? 'yes' : 'no';
+    const evenAnswer = isEven(generatedQuestion) ? 'yes' : 'no';
+    const primeStatus = isPrime(generatedQuestion) ? 'prime' : 'not prime';
 
     return {
       question: generatedQuestion,
-      answer,
+      answer: `${evenAnswer}, ${primeStatus}`,
     };
   };
 
