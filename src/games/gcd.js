@@ -1,32 +1,31 @@
+#!/usr/bin/env node
+const calculateGCD = (num1, num2) => {
+  let a = num1;
+  let b = num2;
+
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
+  }
+  return a;
+};
+
 const defineGCD = () => {
-  // Game description
-  console.log('Find the greatest common divisor of given numbers.');
+  const description = 'Find the greatest common divisor of given numbers.';
 
-  // Generate numbers for the question
-  const firstNum = Math.floor(Math.random() * 100);
-  const secondNum = Math.floor(Math.random() * 100);
+  const getQuestionAndAnswer = () => {
+    const firstNum = Math.floor(Math.random() * 100);
+    const secondNum = Math.floor(Math.random() * 100);
 
-  // Print the question in the console
-  const questionExpression = `${firstNum} ${secondNum}`;
-  console.log(`Question: ${questionExpression}`);
+    const question = `${firstNum} ${secondNum}`;
 
-  // Calculate the greatest common divisor
-  const calculateGCD = (biggerNum, smallerNum) => {
-    let a = biggerNum;
-    let b = smallerNum;
+    const correctAnswer = calculateGCD(firstNum, secondNum);
 
-    while (b !== 0) {
-      const num = b;
-      b = a % b;
-      a = num;
-    }
-    return a;
+    return { question, answer: String(correctAnswer) };
   };
 
-  // Save the calculated answer in the variable
-  const correctAnswer = calculateGCD(firstNum, secondNum);
-
-  return { question: questionExpression, answer: String(correctAnswer) };
+  return { description, getQuestionAndAnswer };
 };
 
 export default defineGCD;
