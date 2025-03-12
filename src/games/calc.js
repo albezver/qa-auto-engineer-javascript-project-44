@@ -1,25 +1,35 @@
 #!/usr/bin/env node
-const calculateNumbers = () => {
-  console.log('What is the result of the expression?');
-  const firstNum = +Math.floor(Math.random() * 100).toString();
-  const secondNum = +Math.floor(Math.random() * 100).toString();
-  const operators = ['+', '-', '*'];
-  const randomOperator = operators[Math.floor(Math.random() * operators.length)];
-
-  const questionExpression = `${firstNum} ${randomOperator} ${secondNum}`;
-
-  let correctAnswer;
-  if (randomOperator === '+') {
-    correctAnswer = firstNum + secondNum;
-  } else if (randomOperator === '-') {
-    correctAnswer = firstNum - secondNum;
-  } else if (randomOperator === '*') {
-    correctAnswer = firstNum * secondNum;
+// Execute calculations
+const calculate = (num1, num2, operator) => {
+  if (operator === '+') {
+    return num1 + num2;
   }
+  if (operator === '-') {
+    return num1 - num2;
+  }
+  return num1 * num2;
+};
 
-  console.log(`Question: ${questionExpression}`);
+const calculateNumbers = () => {
+  const description = 'What is the result of the expression?';
 
-  return { question: questionExpression, answer: String(correctAnswer) };
+  const getQuestionAndAnswer = () => {
+    // Generate numbers and operator
+    const firstNum = Math.floor(Math.random() * 100);
+    const secondNum = Math.floor(Math.random() * 100);
+    const operators = ['+', '-', '*'];
+    const operator = operators[Math.floor(Math.random() * operators.length)];
+
+    // Generate a question
+    const question = `${firstNum} ${operator} ${secondNum}`;
+
+    // Get calculated results from calculate()
+    const answer = calculate(firstNum, secondNum, operator);
+
+    return { question, answer: String(answer) };
+  };
+
+  return { description, getQuestionAndAnswer };
 };
 
 export default calculateNumbers;
